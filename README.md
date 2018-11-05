@@ -16,6 +16,6 @@ docker build --build-arg url=https://github.com/waynefoundation/spring-cloud-con
 
 ### Run
 
-```
+```bash
 docker run --rm -p 8888:8888 wayneenterprises/spring-cloud-config
 ```
