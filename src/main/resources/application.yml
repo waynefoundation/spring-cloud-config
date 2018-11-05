@@ -12,7 +12,7 @@ spring:
         native:
           searchLocations: file://${user.home}/config-repo
         git:
-          uri: https://github.com/waynefoundation/spring-cloud-config
+          uri: https://github.com/waynefoundation/spring-cloud-config-repo
         vault:
           port: 8200
           host: 127.0.01
