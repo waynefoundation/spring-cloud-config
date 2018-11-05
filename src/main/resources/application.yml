@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: native, git, vault
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file://${user.home}/config-repo
+        git:
+          uri: https://github.com/waynefoundation/spring-cloud-config
+        vault:
+          port: 8200
+          host: 127.0.01
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, env
