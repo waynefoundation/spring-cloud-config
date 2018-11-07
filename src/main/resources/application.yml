@@ -14,8 +14,15 @@ spring:
         git:
           uri: https://github.com/waynefoundation/spring-cloud-config-repo
         vault:
-          port: 8200
           host: vault-service
+          port: 8200
+          scheme: http
+          backend: secret
+          defaultKey: application
+          profileSeparator: ','
+          kvVersion: 2
+          skipSslValidation: true
+          timeout: 5
 
 management:
   endpoints:
